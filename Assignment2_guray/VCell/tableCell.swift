@@ -9,12 +9,11 @@ import UIKit
 
 class tableCell: UITableViewCell {
 
+    // outlet for label of tabla
     @IBOutlet weak var quantityFT: UILabel!
     @IBOutlet weak var priceFT: UILabel!
     @IBOutlet weak var nameFT: UILabel!
     
-    
-   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

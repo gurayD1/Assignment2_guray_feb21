@@ -9,16 +9,16 @@ import UIKit
 
 class ManagerViewController: UIViewController {
 
+    // class object for classes
     var manager : ProductManager?
     var historyManager : HistoryManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        navigationItem.backButtonTitle = "test2"
+        navigationItem.backButtonTitle = "Manager Page"
     }
     
+    // seque to send the data to another page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        
         if segue.identifier == "HistoryItems" {
@@ -26,14 +26,13 @@ class ManagerViewController: UIViewController {
         var destination = segue.destination as! HistoryItemsViewController
         
         destination.manager = manager;
-            destination.historyManager = historyManager;
+        destination.historyManager = historyManager;
         }
         else if segue.identifier == "restock" {
             
             var destination = segue.destination as! RestockViewController
             destination.manager = manager;
         }
-        
         
     }
     

@@ -9,30 +9,26 @@ import UIKit
 
 class HistoryDetailViewController: UIViewController {
 
-   
+   // outlet for product detail label
     @IBOutlet weak var productDetailLabel: UITextView!
-    
+    // object for history manager class
     var historyManager : HistoryManager?
+    // variable for selected row
     var indexNumber : Int = 0;
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    // display the details of the product
+    override func viewWillAppear(_ animated: Bool){
+        
         let name = historyManager!.purshaseList[indexNumber].name!
         let price = historyManager!.purshaseList[indexNumber].totalPrice!
         let quantity = historyManager!.purshaseList[indexNumber].quantity!
         let time = historyManager!.purshaseList[indexNumber].purchaseDate
         
-       print( "\(name) \n \(price) \n\(quantity) \n\(time) \n")
-        
-       // historyDetailLabel.text =  "\(name) \n \(price) \n\(quantity) \n\(time) \n"
-       // labelDetail.text = "hey there"
-       // historyDetailLabel.text = output;
-        //print(productName);
-        print("here")
-        productDetailLabel.text = "\(name) \n\(quantity) \n\(time) \n Total amount \(price) \n"
+        productDetailLabel.text = "\(name) \n\(quantity) \n\(time) \nTotal amount \(price) \n"
     }
-    
 
     /*
     // MARK: - Navigation

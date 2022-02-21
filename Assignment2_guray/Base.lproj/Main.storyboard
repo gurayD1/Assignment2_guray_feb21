@@ -378,7 +378,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Kbj-n3-cwl"/>
                     <connections>
-                        <outlet property="mainTable" destination="4QF-H1-zEh" id="rPf-kJ-kME"/>
+                        <outlet property="mainTable" destination="4QF-H1-zEh" id="edO-lE-g6N"/>
                         <outlet property="quantityLabel" destination="8Iq-Eb-fc1" id="jhj-Pq-lPb"/>
                         <outlet property="totalLabel" destination="e1G-HG-CXY" id="K3y-pK-w19"/>
                         <outlet property="typeLabel" destination="txD-Bu-dR2" id="mBq-4Q-k3l"/>
@@ -475,6 +475,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Restock">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="restockButtonClicked:" destination="BKk-a4-hll" eventType="touchUpInside" id="bL0-Rf-H1U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gES-Xf-d2t">
                                 <rect key="frame" x="145" y="182" width="85" height="38"/>
@@ -482,6 +485,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Cancel">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1oV-Wf-uHH" kind="show" id="rcK-0E-HX6"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IPR-gz-286">
                                 <rect key="frame" x="0.0" y="270" width="414" height="592"/>
@@ -535,7 +541,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="m2S-d2-cIr"/>
                     <connections>
-                        <outlet property="quantityInput" destination="svw-iS-wf1" id="gTS-CJ-XOV"/>
+                        <outlet property="mainTable" destination="IPR-gz-286" id="uvQ-m9-h4L"/>
+                        <outlet property="quantityInput" destination="svw-iS-wf1" id="dUP-GC-7LN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0D-O9-kkq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -599,7 +606,7 @@
                                                 <connections>
                                                     <outlet property="nameHistoryTable" destination="FSh-AC-25E" id="7x2-Ze-iOH"/>
                                                     <outlet property="quantityHistoryTable" destination="ceO-uO-8GK" id="l3S-r7-C5j"/>
-                                                    <segue destination="92b-Ru-hqV" kind="show" identifier="historyDetail" id="1Hw-E1-Ojq"/>
+                                                    <segue destination="92b-Ru-hqV" kind="show" identifier="historyDetail" id="Ezc-pn-Zl1"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -648,7 +655,7 @@
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="3o5-gD-rgR">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="test" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-5y-bZa">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-5y-bZa">
                                         <rect key="frame" x="0.0" y="176" width="414" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -697,6 +704,9 @@
             <point key="canvasLocation" x="18.840579710144929" y="84.375"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="b3Q-GQ-O6R"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

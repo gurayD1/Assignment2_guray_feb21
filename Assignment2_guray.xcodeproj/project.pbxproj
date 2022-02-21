@@ -85,8 +85,6 @@
 				CA32213927B8A308008477CD /* Info.plist */,
 				CA32215727BDD28C008477CD /* Classes Folder */,
 				CA32215127BB5F81008477CD /* VCell */,
-				CA32215827BDD831008477CD /* HistoryDetailViewController.swift */,
-				CA32215A27BDEDA8008477CD /* RestockViewController.swift */,
 			);
 			path = Assignment2_guray;
 			sourceTree = "<group>";
@@ -106,6 +104,8 @@
 				CA32212F27B8A304008477CD /* ViewController.swift */,
 				CA32214927BB2B3E008477CD /* ManagerViewController.swift */,
 				CA32214B27BB4650008477CD /* HistoryItemsViewController.swift */,
+				CA32215827BDD831008477CD /* HistoryDetailViewController.swift */,
+				CA32215A27BDEDA8008477CD /* RestockViewController.swift */,
 			);
 			path = VControllers;
 			sourceTree = "<group>";

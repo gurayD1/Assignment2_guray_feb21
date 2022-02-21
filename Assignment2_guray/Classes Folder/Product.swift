@@ -7,11 +7,11 @@
 
 import Foundation
 class Product{
-    
+    // properties
     var name : String?;
     var quantity : Int?;
     var price : Double?;
-    
+    // main constructor with parameters
     init (na: String, qu: Int, pr : Double){
         
         name = na;

@@ -8,9 +8,8 @@
 import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
-    
+    // outlet for label of the table
     @IBOutlet weak var nameHistoryTable: UILabel!
-    
     @IBOutlet weak var quantityHistoryTable: UILabel!
 
     override func awakeFromNib() {
